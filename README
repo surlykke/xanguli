@@ -1,0 +1,14 @@
+This is Xanguli - Xanguli Ain't No GUi LIbrary. 
+The xanguli project is hosted on http://xanguli.googlecode.com. 
+The sourcecode is hosted on github. To get the latest of xanguli do:
+
+git clone git://github.com/surlykke/xanguli.git
+
+To build xanguli, go to the root of the checked-out source and do:
+
+    cmake CMakeList.txt
+    make
+
+You'll need to have cmake, make and gcc installed (at least).
+
+There's no install yet...
