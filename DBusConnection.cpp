@@ -6,14 +6,17 @@
  */
 
 #include "DBusConnection.h"
+#include <memory>
+#include <string>
 
 namespace Xanguli {
 
 DBusConnection::DBusConnection(std::string path) {
+
 }
 
 DBusConnection::~DBusConnection() {
-	// TODO Auto-generated destructor stub
+	// Nix zu tun
 }
 
 DBusConnection DBusConnection::SessionBus() {

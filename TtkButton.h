@@ -16,28 +16,13 @@
 
 namespace Xanguli {
 
-/**
- * dbus-object:
- *   signals:
- *   - command:
- *       args:
- *       - name: command-name
- *         type: s
- *
- */
 class TtkButton : public TkWidget
 {
 public:
 	TtkButton(dbus_string dbusId, dbus_string parent, dbus_map options, Tcl_Interp* interp);
+
 	void text(dbus_string text);
 
-	/**
-	 * dbus-method:
-	 *   args:
-	 *   - name: command
-	 *   - type: s
-	 *   - doc:  The name of the command to invoke when the button is pressed.
-	 */
 	void command(std::string commandName);
 };
 

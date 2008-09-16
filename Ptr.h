@@ -15,9 +15,18 @@ public:
 	Ptr<T>(T obj);
 	Ptr<T>(const Ptr<T>& ptr);
 	T operator->();
+	T operator*();
+	void operator=(Ptr<T> other);
 	virtual ~Ptr();
 };
 
-}
+template <class T> class Handle {
+friend Ptr;
+private:
+	Handle<T>(T obj);
+	~Handle<T>();
+	T obj;
+};
 
+}
 #endif /* PTR_H_ */

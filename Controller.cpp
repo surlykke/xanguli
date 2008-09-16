@@ -77,7 +77,7 @@ bool Controller::ttkButton(dbus_string parent,
 
   std::string cmd = "button " + tk_id;
 
-  // TODO: Put options på
+  // TODO: Put options pï¿½
 
   if (Tcl_Eval(interp, cmd.c_str()) != TCL_OK) {
     // set error felt
