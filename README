@@ -9,6 +9,6 @@ To build xanguli, go to the root of the checked-out source and do:
     cmake CMakeList.txt
     make
 
-You'll need to have cmake, make and gcc installed (at least).
+You'll need to have cmake, make and gcc installed (at least, and probably some other build tools...)
 
 There's no install yet...
