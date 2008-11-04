@@ -1,0 +1,6 @@
+<interface name="org.freedesktop.SampleInterface">
+  <property name="command" type="s" access="readwrite"/>
+  <signal name="command">
+    <arg name="command" type="s"/>
+  </signal>
+</interface>

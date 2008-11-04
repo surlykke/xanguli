@@ -8,15 +8,24 @@
 #ifndef DBUSPROXY_H_
 #define DBUSPROXY_H_
 
-#include "dbus-types.h"
+#include "dbus/dbus.h"
+#include <string>
 
 namespace Xanguli {
 
 class DBusProxy {
 public:
-	DBusProxy(dbus_string service, dbus_string interface, dbus_string path);
+	DBusProxy(DBusConnection *bus, std::string service, std::string interface, std::string path);
 	virtual ~DBusProxy();
-	bool call(dbus_string method, dbus_string signature,...);
+	bool call(std::string method, std::string in_signature, std::string out_signature, ...);
+
+private:
+
+	DBusConnection *bus;
+	std::string service;
+	std::string interface;
+	std::string path;
+
 };
 
 }

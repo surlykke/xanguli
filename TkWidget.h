@@ -7,16 +7,14 @@
 #ifndef TKWIDGET_H_
 #define TKWIDGET_H_
 
-#include "ServerObject.h"
-#include "dbus-types.h"
+#include <string>
 
 namespace Xanguli {
 
-class TkWidget : public ServerObject
-{
+class TkWidget {
 public:
-	TkWidget(dbus_string dbusId);
-    void pack(); // Fixme
+	TkWidget(std::string dbusId);
+    void pack(); // TODO
 };
 
 }

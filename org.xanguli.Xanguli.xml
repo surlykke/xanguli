@@ -1,0 +1,5 @@
+<interface name="org.xanguli.Xanguli">
+  <method name="CreateController">
+    <arg name="path" type="s" direction="out"/>
+  </method>
+</interface>

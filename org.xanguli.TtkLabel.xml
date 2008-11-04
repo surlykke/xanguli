@@ -1,0 +1,10 @@
+<interface name="org.xanguli.TtkLabel">
+  <property name="anchor" type="s" access="readwrite"/>
+  <property name="background" type="s" access="readwrite"/>
+  <property name="foreground" type="s" access="readwrite"/>
+  <property name="justify" type="s" acccess="readwrite"/> 
+  <property name="font" type="s" access="readwrite"/>
+  <property name="padding" type="ai" access="readwrite"/>
+  <property name="relief" type="s" access="readwrite"/>
+  <property name="wraplength" type="i" access="readwrite"/>
+</interface>

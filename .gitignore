@@ -9,3 +9,5 @@ Debug
 .project
 .cproject
 .settings
+*_dispatcher.h
+*_dispatcher.cpp

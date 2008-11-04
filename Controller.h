@@ -12,30 +12,20 @@
 #include <stdlib.h>
 #include <tcl.h>
 
-#include "ServerObject.h"
-#include "dbus-types.h"
+#include <string>
+#include <map>
 
 namespace Xanguli {
 
 
-class Controller : public ServerObject
-{
+class Controller {
 public:
-	Controller(dbus_string dbusId);
+	Controller(std::string dbusId);
 
-	/**
-	 * dbus-method:
-	 *   name: TtkButton
-	 *   args:
-	 *   - name: parent
-	 *     type: s
-	 *   - name: options
-	 *     type: a{ss}
-	 *   - name: dbusPath
-	 *     type: s
-	 *     direction: out
-	 */
-	bool ttkButton(dbus_string parent, dbus_map options, dbus_string &dbusPattern);
+	void createWidget(std::string widget_name,
+					  std::string parent_dbus_id,
+					  std::map<std::string, std::string> options,
+					  std::string &dbus_id);
 
 	/**
 	 * dbus-method:
@@ -45,7 +35,7 @@ public:
 
 private:
   Tcl_Interp *interp;
-  dbus_string dbusId;
+  std::string dbusId;
 };
 
 }

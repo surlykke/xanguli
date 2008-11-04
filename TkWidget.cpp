@@ -3,8 +3,7 @@
 
 namespace Xanguli {
 
-TkWidget::TkWidget(dbus_string dbusId) : ServerObject(dbusId)
-{
+TkWidget::TkWidget(std::string dbusId) {
 	// TODO
 }
 

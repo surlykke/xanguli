@@ -9,19 +9,18 @@ add_executable(xanguli
                DBusProxy.cpp
                DBusInterface.cpp
                XanguliException.cpp
-               ServerObject.cpp)
+               ServerObject.cpp
+               org_xanguli_Xanguli.cpp)
 
-add_executable(test-client
-               test-client.c)
+add_custom_command(OUTPUT org_xanguli_Xanguli.cpp
+                   COMMAND ./dbus-generator.rb -n Xanguli -i org.xanguli.Xanguli
+                   DEPENDS org.xanguli.Xanguli.xml dbus-generator.rb)		
 
 include_directories(/usr/include
                     /usr/include/tcl8.5 
                     /usr/include/dbus-1.0 
                     /usr/lib/dbus-1.0/include 
-                    /usr/include/c++/4.3
-                    /usr/include/dbus-1.0
-                    /usr/include/glib-2.0
-                    /usr/lib/glib-2.0/include)
+                    /usr/include/c++/4.3)
 
 target_link_libraries(xanguli libtcl8.5.so libtk8.5.so libdbus-1.so)
-target_link_libraries(test-client libdbus-glib-1.so)
+
